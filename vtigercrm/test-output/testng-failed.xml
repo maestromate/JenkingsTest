@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.acs.vtigercrm.testscripts.LeadPageAutomationScripts">
+      <class name="com.acs.vtigercrm.testscripts.LoginPageTests">
         <methods>
-          <include name="beforeSuite"/>
-          <include name="beforeTestCase"/>
-          <include name="testLeadCreationWithRequiredFieldsOnly"/>
-          <include name="afterTestCase"/>
+          <include name="afterEachTest"/>
+          <include name="setupReport"/>
+          <include name="verifyInvalidLogin"/>
+          <include name="tearDownBrowser"/>
+          <include name="tearDownReport"/>
+          <include name="launchBrowser"/>
+          <include name="startTest"/>
         </methods>
-      </class> <!-- com.acs.vtigercrm.testscripts.LeadPageAutomationScripts -->
+      </class> <!-- com.acs.vtigercrm.testscripts.LoginPageTests -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

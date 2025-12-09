@@ -7,7 +7,7 @@ import com.acs.vtigercrm.pages.HomePage;
 import com.aventstack.extentreports.Status;
 
 
-public class LeadPageAutomationScripts extends CommonAutomationScripts {
+public class LeadPageAutomationScripts extends BaseTest {
 
 	
 //	================================== TestCase-1 ========================================
@@ -15,15 +15,14 @@ public class LeadPageAutomationScripts extends CommonAutomationScripts {
 	@Test()
 	public void testLeadCreationWithRequiredFieldsOnly() {
 
-		HomePage hp = new HomePage(wu);
-		hp.clickLeadsModule();
+		HomePage hp = new HomePage(driver, util);
 		hp.clickOnCreateLeadButton();
 
-		CreateNewLeadPage createNewLeadButton = new CreateNewLeadPage(wu);
+		CreateNewLeadPage createNewLeadButton = new CreateNewLeadPage(util);
 		createNewLeadButton.createLeadByRequiredFieldOnly();
 		createNewLeadButton.clickOnSaveButton();
 //		System.out.println("testLeadCreationWithRequiredFieldsOnly TestCase exicute successfully");
-		wu.getExtTest().log(Status.INFO,"testLeadCreationWithRequiredFieldsOnly TestCase exicute successfully");
+		util.getExtentTest().log(Status.INFO,"testLeadCreationWithRequiredFieldsOnly TestCase exicute successfully");
 
 	}
 
@@ -32,10 +31,10 @@ public class LeadPageAutomationScripts extends CommonAutomationScripts {
 	  @Test(priority=1) 
 	  public void testLeadCreationWithRequiredFieldsOnlyTwo() {
 	  
-	  HomePage hp = new HomePage(wu); hp.clickLeadsModule();
+	  HomePage hp = new HomePage(driver, util); hp.clickOnCreateLeadButton();
 	  hp.clickOnCreateLeadButton();
 	  
-	  CreateNewLeadPage createNewLeadButton = new CreateNewLeadPage(wu);
+	  CreateNewLeadPage createNewLeadButton = new CreateNewLeadPage(util);
 	  createNewLeadButton.createLeadByRequiredFieldOnly();
 	  createNewLeadButton.clickOnSaveButton(); System.out.
 	  println("testLeadCreationWithRequiredFieldsOnly2 TestCase exicute successfully"); 
@@ -49,10 +48,10 @@ public class LeadPageAutomationScripts extends CommonAutomationScripts {
 	  @Test(priority=2) 
 	  public void testLeadCreationWithRequiredFieldsOnlyThree() {
 	  
-	  HomePage hp = new HomePage(wu); hp.clickLeadsModule();
+	  HomePage hp = new HomePage(driver, util); hp.clickOnCreateLeadButton();
 	  hp.clickOnCreateLeadButton();
 	  
-	  CreateNewLeadPage createNewLeadButton = new CreateNewLeadPage(wu);
+	  CreateNewLeadPage createNewLeadButton = new CreateNewLeadPage(util);
 	  createNewLeadButton.createLeadByRequiredFieldOnly();
 	  createNewLeadButton.clickOnSaveButton();
 	  System.out.println("testLeadCreationWithRequiredFieldsOnly3 = regression");
@@ -65,10 +64,10 @@ public class LeadPageAutomationScripts extends CommonAutomationScripts {
 	  @Test(priority=3) 
 	  public void testLeadCreationWithRequiredFieldsOnlyFour() {
 	  
-	  HomePage hp = new HomePage(wu); hp.clickLeadsModule();
+	  HomePage hp = new HomePage(driver, util); hp.clickOnCreateLeadButton();
 	  hp.clickOnCreateLeadButton();
 	  
-	  CreateNewLeadPage createNewLeadButton = new CreateNewLeadPage(wu);
+	  CreateNewLeadPage createNewLeadButton = new CreateNewLeadPage(util);
 	  createNewLeadButton.createLeadByRequiredFieldOnly();
 	  createNewLeadButton.clickOnSaveButton();
 	  System.out.println("testLeadCreationWithRequiredFieldsOnly4 = smoke4"); 

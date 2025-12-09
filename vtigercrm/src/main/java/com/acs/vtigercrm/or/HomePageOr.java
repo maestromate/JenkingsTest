@@ -1,11 +1,23 @@
 package com.acs.vtigercrm.or;
 
-import com.acs.vtigercrm.basepage.BasePage;
-import com.acs.vtigercrm.utils.WebDriverUtils;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class HomePageOr extends BasePage{
+
+public class HomePageOr{
 	
-protected HomePageOr(WebDriverUtils wuObject) {
-	super(wuObject);
+public HomePageOr(WebDriver driver) {
+	PageFactory.initElements(driver, this);
 }
+	
+	@FindBy(id="")
+	protected WebElement administrator;
+	
+	@FindBy()
+	protected WebElement SignOut;
+	
+	@FindBy()
+	protected WebElement CreateLeadButton;
 }

@@ -1,37 +1,42 @@
 package com.acs.vtigercrm.pages;
 
+import org.openqa.selenium.WebDriver;
+
 import com.acs.vtigercrm.or.LoginPageOr;
-import com.acs.vtigercrm.utils.WebDriverUtils;
-import com.aventstack.extentreports.Status;
+import com.evs.vtiger.utilities.ConfigReader;
+import com.evs.vtiger.utilities.WebDriverUtils;
 
 public class LoginPage extends LoginPageOr {
-//	WebUtil wu=null;
-	public LoginPage(WebDriverUtils wuObject) {
-		super(wuObject);
-		wu = wuObject;
-//		System.out.println("LoginPage class constructor exicuted");
-		wu.getExtTest().log(Status.INFO, "LoginPage class constructor exicuted");
 
+	private WebDriverUtils util;
+	private WebDriver driver;
+
+	public LoginPage(WebDriver driver, WebDriverUtils util) {
+		super(driver);
+		this.util = util;
+		this.driver = driver;
 	}
 
-	private WebDriverUtils wu;
-
-	public void validLogin() {
-
-		wu.SendKeysText(userNameEd, wu.getPropertyValue("username"), "user name box");
-
-		wu.SendKeysText(userPasswordEd,wu.getPropertyValue("password") , "password");
-
-		wu.clickButton(loginBt, "LoginButton");
+	public void enterUserName(String userName) {
+		util.sendKeysText(userNameEd, userName, "User Name");
 	}
 
-	public void invalidLogin() {
-		wu.SendKeysText(userNameEd, wu.getPropertyValue("username"), "user name box");
-
-		wu.SendKeysText(userPasswordEd, wu.getPropertyValue("password"), "password");
-
-		wu.clickButton(loginBt, "LoginButton");
+	public void enterPassword(String password) {
+		util.sendKeysText(userPasswordEd, password, "Password");
 	}
-	
 
+	public void clickLogin() {
+		util.clickButton(loginBt, "Login Button");
+	}
+
+	public HomePage login(String userName, String userPass) {
+		enterUserName(userName);
+		enterPassword(userPass);
+		clickLogin();
+		return new HomePage(driver,util);
+	}
+
+	public String getErrorMessage() {
+		return util.getInnerText(errorMsg, "error message");
+	}
 }

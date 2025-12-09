@@ -3,16 +3,12 @@ package com.acs.vtigercrm.or;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import com.evs.vtiger.utilities.WebDriverUtils;
 
-import com.acs.vtigercrm.basepage.BasePage;
-import com.acs.vtigercrm.utils.WebDriverUtils;
-
-public class CreateNewLeadPageOr extends BasePage {
+public class CreateNewLeadPageOr  {
 
 	public CreateNewLeadPageOr(WebDriverUtils wuObject) {
-		super(wuObject);
-		PageFactory.initElements(wuObject.getDriver(), this);
-
+			PageFactory.initElements(wuObject.getDriver(), this);
 	}
 	
 	@FindBy(xpath = "//input[@name='lastname']")

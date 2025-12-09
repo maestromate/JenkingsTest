@@ -1,18 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<Suite name="Vtiger Automation" verbose="3">
 
- 
+<Groups>
+<run>
+<include name ="smoke"/>
+<include name ="Regression"/>
+</run>
+</Groups>
+<test>
+</test>
 
-  <test name="Test">
-  
-    <classes>
-      <class name="com.acs.vtigercrm.testscripts.LeadPageAutomationScripts">
-       <methods>
-            <include name = "testLeadCreationWithRequiredFieldsOnly"/>
-            </methods>
-            
-          </class>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+
+
+
+	<test>
+
+		<!--<packages>
+
+<package name ="vtigercrm.com.acs.vtigercrm.testscripts">
+</package>
+
+</packages>
+-->
+
+		<classes>
+
+			<class name="vtigercrm.LoginPageTests">
+				<run>
+					<Methods>
+						<include name="verifyValidLogin" />
+						<include name="" />
+						<exclude name="verifyInvalidLogin" />
+
+					</Methods>
+				</run>
+
+			</class>
+             //If you don't have child and inner text then you can remore ending tag just use a forward slash' 
+            <class name="vtigercrm.LeadPageAutomationScripts" /> 
+        </classes>
+
+	</test>
+
+</Suite>

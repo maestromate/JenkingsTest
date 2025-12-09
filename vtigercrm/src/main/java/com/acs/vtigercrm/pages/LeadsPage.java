@@ -3,7 +3,7 @@ package com.acs.vtigercrm.pages;
 import org.openqa.selenium.support.PageFactory;
 
 import com.acs.vtigercrm.or.LeadsPageOr;
-import com.acs.vtigercrm.utils.WebDriverUtils;
+import com.evs.vtiger.utilities.WebDriverUtils;
 
 public class LeadsPage extends LeadsPageOr {
 

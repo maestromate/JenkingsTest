@@ -52,7 +52,9 @@ public class CreateNewLeadPage extends CreateNewLeadPageOr {
 	public void createLeadByAllField() {
 
 	}
-
+public void updated_v9createLeadByAllField() {
+System.out.println("this is to test jenkings");
+}
 	public void creatLeadByFilledOnlyOneRequredField() {
 
 	}
@@ -64,3 +66,4 @@ public class CreateNewLeadPage extends CreateNewLeadPageOr {
 	}
 
 }
+

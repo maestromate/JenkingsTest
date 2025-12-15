@@ -28,6 +28,7 @@ public class CommonAutomationScripts {
 	public void beforeSuite(){
 
 		ext = new ExtentReports();
+		ext = new ExtentReports();//this is updated demo chage test for jenkinks
 		ExtentSparkReporter esr =new ExtentSparkReporter("extentReport.html");
 		ext.attachReporter(esr);
 		System.out.println("before suite method run");
@@ -120,3 +121,4 @@ public class CommonAutomationScripts {
 	 */
 
 }
+

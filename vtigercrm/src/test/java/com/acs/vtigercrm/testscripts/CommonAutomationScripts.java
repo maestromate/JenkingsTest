@@ -16,7 +16,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 
-public class CommonAutomationScripts {
+public class OnlyAutomationScripts {
 
 
 	protected WebDriverUtils wu;
@@ -121,4 +121,5 @@ public class CommonAutomationScripts {
 	 */
 
 }
+
 

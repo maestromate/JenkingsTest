@@ -21,6 +21,7 @@ public class LeadPageAutomationScripts extends CommonAutomationScripts {
 
 		CreateNewLeadPage createNewLeadButton = new CreateNewLeadPage(wu);
 		createNewLeadButton.createLeadByRequiredFieldOnly();
+		createNewLeadButton.createLeadByRequiredFieldOnly();
 		createNewLeadButton.clickOnSaveButton();
 //		System.out.println("testLeadCreationWithRequiredFieldsOnly TestCase exicute successfully");
 		wu.getExtTest().log(Status.INFO,"testLeadCreationWithRequiredFieldsOnly TestCase exicute successfully");
@@ -77,3 +78,4 @@ public class LeadPageAutomationScripts extends CommonAutomationScripts {
 	
 	
 }
+

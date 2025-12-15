@@ -13,14 +13,15 @@ public class HomePage extends HomePageOr {
 		wu = wuObject;
 		PageFactory.initElements(wu.getDriver(), this);
 //		System.out.println("home page constructor 2");
-		// new commit to check jenkins update 2
+	    // new commit to check jenkins update 2
 		wu.getExtTest().log(Status.INFO, "HomePage class constructor exicuted");
-
+wu.getExtTest().log(Status.INFO, "HomePage class constructor exicuted");
 
 	}
 
 	WebDriverUtils wu ;
 
 }
+
 
 
